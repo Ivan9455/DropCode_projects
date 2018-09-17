@@ -54,39 +54,3 @@ function loading_event() {
 window.onload = function () {
     loading_event();
 };
-
-var opt = function () {
-    console.log(this)
-    // document.getElementById("id" + e).classList.remove("hidden");
-    // document.getElementById("id" + e).classList.add("open");
-};
-
-var opt_close = function () {
-    // document.getElementById("id" + e).classList.add("hidden");
-    // document.getElementById("id" + e).classList.remove("open");
-};
-var up = function (id) {
-    console.log(event)
-    document.getElementById("select_" + id).innerText = event.target.innerText;
-};
-var arrow_up = function (id) {
-    //console.log(document.getElementById("select1_" + id))
-    let str = document.getElementById("select2_" + id);
-    let num = parseInt(str.innerText);
-    str.innerText = num + 1;
-
-};
-var arrow_down = function (id) {
-    document.getElementById("select2_" + id).innerText -= 1;
-};
-var up_v = function (id) {
-    document.getElementById("select3_" + id).innerText = event.target.innerText;
-};
-var opt_v = function (id) {
-    document.getElementById("id3_" + id).classList.remove("hidden");
-    document.getElementById("id3_" + id).classList.add("open");
-};
-var opt_close_v = function (id) {
-    document.getElementById("id3_" + id).classList.add("hidden");
-    document.getElementById("id3_" + id).classList.remove("open");
-};

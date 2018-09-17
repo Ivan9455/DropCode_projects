@@ -19,22 +19,6 @@ svg {
     position: relative;
 }
 
-/*.nav{*/
-/*width: 117.5px;*/
-/*height: 40px;*/
-/*background: #4E88CD;*/
-/*}*/
-/*.nav1{*/
-
-/*}*/
-/*.nav2{*/
-/*position: relative;*/
-/*left: 117.5px;*/
-/*border-style: solid;*/
-/*border-width: 20px 0 20px 20px;*/
-/*border-color: transparent transparent transparent #4E88CD;//*/
-
-/*}*/
 .nav li {
     float: left;
     width: 117.5px;
@@ -67,10 +51,16 @@ svg {
 .nav li:hover {
     background: yellow;
 }
-
 .nav li:hover:after {
     border-color: transparent transparent transparent yellow;
 }
+.nav li:active {
+    background: red;
+}
+.nav li:active:after{
+    border-color: transparent transparent transparent red;
+}
+
 
 .nav img {
     position: absolute;
@@ -200,9 +190,11 @@ select {
     float: left;
     cursor: pointer;
 }
-.select_text{
+
+.select_text {
     position: absolute;
 }
+
 .select_1 {
     width: 200px;
     border: 1px solid #C0C0C0;
@@ -244,9 +236,11 @@ select {
     text-indent: 5px;
     cursor: auto;
 }
-#select2{
+
+#select2 {
     position: absolute;
 }
+
 .select_2_2 {
     background: #6CA5DD;
     width: 20px;
@@ -255,7 +249,8 @@ select {
     cursor: pointer;
     cursor: pointer;
 }
-.select_2_2_arrow1{
+
+.select_2_2_arrow1 {
     width: 0;
     height: 0;
     left: 5px;
@@ -263,10 +258,11 @@ select {
     position: relative;
     border-style: solid;
     border-width: 0 5px 5px 5px;
-    border-color: transparent transparent  white transparent;
+    border-color: transparent transparent white transparent;
 
 }
-.select_2_2_arrow2{
+
+.select_2_2_arrow2 {
     width: 0;
     height: 0;
     position: relative;
@@ -288,26 +284,31 @@ select {
     text-indent: 5px;
     /*color:#808080;*/
 }
+
 /*option{*/
-    /*display: none;*/
+/*display: none;*/
 /*}*/
-.select{
+.select {
     position: absolute;
     opacity: 0;
 }
-.hidden{
+
+.hidden {
     display: none;
 
 }
-.open , .hidden{
+
+.open, .hidden {
     z-index: 1;
     position: absolute;
 
 }
-.open:hover{
+
+.open:hover {
     display: block;
 
 }
+
 .buttons {
     height: 60pt;
     background: url("image/svg/5.svg") no-repeat right bottom;
@@ -315,21 +316,48 @@ select {
 }
 
 .button1, .button2 {
-    width: 90pt;
-    height: 25pt;
-    margin: 20pt 20px 20px 20px;
+    width: 120px;
+    height: 35px;
+    margin: 25px 40px 20px 40px;;
     cursor: pointer;
-    border-radius: 4px;
+    background: #4E88CD;
+    line-height: 35px;
+    text-align: center;
+    display: inline-grid;
 }
 
 .button1 {
     float: left;
-    background: url("image/svg/3.svg") no-repeat right;
+    border-radius: 0 4px 4px 0;
+}
+
+.button1:after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: relative;
+    left: -17.5px;
+    bottom: 35px;
+    border-style: solid;
+    border-width: 17.5px 17.5px 17.5px 0 ;
+    border-color: transparent #4E88CD transparent transparent;
 }
 
 .button2 {
     float: right;
-    background: url("image/svg/4.svg") no-repeat right;
+    border-radius: 4px 0 0 4px;
+}
+
+.button2:after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: relative;
+    left: 120px;
+    bottom: 35px;
+    border-style: solid;
+    border-width: 17.5px 0 17.5px 17.5px;
+    border-color: transparent transparent transparent #4E88CD;
 }
 
 .blocks_h {
@@ -347,13 +375,24 @@ select:active {
 }
 
 .button1:hover, .button2:hover {
-    opacity: 0.85;
+    background: yellow;
+}
+.button1:hover:after{
+    border-color: transparent yellow transparent transparent;
+}
+.button2:hover:after {
+    border-color: transparent transparent transparent yellow;
 }
 
-.button1:active, .button2:active {
-    opacity: 0.7;
+.button1:active , .button2:active {
+    background: red;
 }
-
+.button1:active:after{
+    border-color: transparent red transparent transparent;
+}
+.button2:active:after {
+    border-color: transparent transparent transparent red;
+}
 label {
     cursor: pointer;
 }
