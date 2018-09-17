@@ -33,27 +33,22 @@ function loading_event() {
             }
         });
         select_volume[i].addEventListener('mouseleave', function () {
-            console.log(this)
-            console.log(this.getElementsByClassName("hidden").length)
             if (this.getElementsByClassName("open").length !== 0) {
                 this.getElementsByClassName("open")[0].classList.add("hidden");
                 this.getElementsByClassName("hidden")[0].classList.remove("open");
             }
-            // if (this.getElementsByClassName("open").length === 0) {
-            //     this.getElementsByClassName("open")[0].classList.add("hidden");
-            //     this.getElementsByClassName("hidden")[0].classList.remove("open");
-            // }
-            // if (this.parentElement.getElementsByClassName("open").length !== 0) {
-            //     this.parentElement.getElementsByClassName("open")[0].classList.add("hidden");
-            //     this.parentElement.getElementsByClassName("hidden")[0].classList.remove("open");
-            // }
         });
     }
     for (let i = 0; i < div2.length; i++) {
         div2[i].addEventListener('click', function () {
             this.parentElement.parentElement.getElementsByClassName("select_text")[0].innerText = this.innerText;
+            if (this.parentElement.parentElement.getElementsByClassName("open")[0].classList[0] === "open") {
+                this.parentElement.parentElement.getElementsByClassName("open")[0].classList.add("hidden");
+                this.parentElement.parentElement.getElementsByClassName("hidden")[0].classList.remove("open");
+            }
         });
     }
+
 }
 
 window.onload = function () {
