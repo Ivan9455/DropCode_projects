@@ -18,12 +18,8 @@ let ajax = function (method, url_api, asinc) {
     xhr.open(method, url_api, asinc);
     xhr.send();
     if (xhr.status != 200) {
-        // обработать ошибку
-        //alert( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
         return xhr.status;
     } else {
-        // вывести результат
-        // responseText -- текст ответа.
         return JSON.parse(xhr.responseText);
     }
 };
